@@ -1,3 +1,3 @@
 SELECT *
-FROM 'voicy-aa935:voicy_player_play.20190201'
+FROM `voicy_player_play.play_201902*`
 limit 100
