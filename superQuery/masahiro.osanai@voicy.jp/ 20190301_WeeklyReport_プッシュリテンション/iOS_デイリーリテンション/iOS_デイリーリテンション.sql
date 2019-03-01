@@ -8,9 +8,9 @@ where device.operating_system = "IOS"
 
 select first_date
 ,count(distinct user_pseudo_id) as dl_uu
-,roound(avg(day1)*100,1) as d1_rate
-,roound(avg(day3)*100,1) as d3_rate
-,roound(avg(day7)*100,1) as d7_rate
+,round(avg(day1)*100,1) as d1_rate
+,round(avg(day3)*100,1) as d3_rate
+,round(avg(day7)*100,1) as d7_rate
 from
 (select user_pseudo_id
 ,first_date
