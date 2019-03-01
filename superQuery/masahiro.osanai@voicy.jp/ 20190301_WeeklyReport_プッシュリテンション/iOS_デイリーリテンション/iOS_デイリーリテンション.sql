@@ -21,5 +21,5 @@ from play_personality_list
 group by user_pseudo_id,first_date
 order by day1 desc) as s
 group by first_date
-having first_date > "2019-02-01"
+having first_date > "2019-01-31"
 order by first_date
