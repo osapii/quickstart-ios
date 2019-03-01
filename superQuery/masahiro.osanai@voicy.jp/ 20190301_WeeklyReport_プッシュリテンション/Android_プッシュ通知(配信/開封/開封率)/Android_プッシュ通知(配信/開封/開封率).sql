@@ -17,4 +17,5 @@ from notification_receive as s
 left join
 notification_open as t
 on
-s.event_date = t.event_date
+s.event_date = t.event_date 
+order by event_date
