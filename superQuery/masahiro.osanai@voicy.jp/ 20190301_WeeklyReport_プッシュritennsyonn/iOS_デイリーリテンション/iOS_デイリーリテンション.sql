@@ -14,6 +14,7 @@ from
 (select user_pseudo_id
 ,first_date
 ,case when sum(case when date_diff = 1 then 1 else 0 end) > 0 then 1 else 0 end as day1
+,case when sum(case when date_diff = 7 then 1 else 0 end) > 0 then 1 else 0 end as day3
 ,case when sum(case when date_diff = 7 then 1 else 0 end) > 0 then 1 else 0 end as day7
 from play_personality_list 
 group by user_pseudo_id,first_date
