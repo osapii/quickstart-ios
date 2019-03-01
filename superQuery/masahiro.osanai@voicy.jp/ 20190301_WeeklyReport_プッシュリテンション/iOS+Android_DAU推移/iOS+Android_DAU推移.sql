@@ -1,4 +1,4 @@
-with add_date as (SELECT EXTRACT(DATE FROM tiemstamp at time zone "Asia/Tokyo") as date
+with add_date as (SELECT EXTRACT(DATE FROM timestamp at time zone "Asia/Tokyo") as date
 ,*
 FROM `voicy_player_play.play_201902*`)
 
