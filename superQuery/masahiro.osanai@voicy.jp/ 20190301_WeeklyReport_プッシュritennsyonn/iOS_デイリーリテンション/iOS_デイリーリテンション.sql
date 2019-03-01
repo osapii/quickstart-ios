@@ -9,12 +9,13 @@ where device.operating_system = "IOS"
 select first_date
 ,count(distinct user_pseudo_id) as dl_uu
 ,avg(day1) as d1_rate
+,avg(day3) as d3_rate
 ,avg(day7) as d7_rate
 from
 (select user_pseudo_id
 ,first_date
 ,case when sum(case when date_diff = 1 then 1 else 0 end) > 0 then 1 else 0 end as day1
-,case when sum(case when date_diff = 7 then 1 else 0 end) > 0 then 1 else 0 end as day3
+,case when sum(case when date_diff = 3 then 1 else 0 end) > 0 then 1 else 0 end as day3
 ,case when sum(case when date_diff = 7 then 1 else 0 end) > 0 then 1 else 0 end as day7
 from play_personality_list 
 group by user_pseudo_id,first_date
