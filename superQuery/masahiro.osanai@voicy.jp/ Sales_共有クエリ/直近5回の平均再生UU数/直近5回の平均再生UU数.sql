@@ -24,7 +24,7 @@ on
 s.speaker_id = t.id)
 
 select speaker_name
-,max(timestamp) as recency_b_timestamp
+,max(first_timestamp) as recency_b_timestamp
 ,max(five_days_avg_b_listener) as five_days_avg_b_listener
 from result
 group by speaker_name
