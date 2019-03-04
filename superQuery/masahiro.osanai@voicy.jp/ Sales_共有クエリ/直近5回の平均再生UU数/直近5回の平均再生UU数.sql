@@ -8,7 +8,7 @@ GROUP BY speaker_id,playlist_id)
 ,filter_newly_five as (
 SELECT *
 ,ROW_NUMBER() over (partition by speaker_id order by first_timestamp) as rank
-FROM total_brand_listners
+FROM total_broad_listeners
 )
 
 SELECT *
