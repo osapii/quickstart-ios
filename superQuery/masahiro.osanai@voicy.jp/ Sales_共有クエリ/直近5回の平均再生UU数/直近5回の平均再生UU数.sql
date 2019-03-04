@@ -3,7 +3,7 @@ with total_broad_listeners as (SELECT speaker_id
 ,count(distinct uuid) as unique_uu
 ,min(timestamp) as first_timestamp
 FROM `voicy_player_play.play_*`
-WHERE GROUP BY speaker_id,playlist_id)
+GROUP BY speaker_id,playlist_id)
 
 ,filter_newly_five as (
 SELECT *
