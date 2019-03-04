@@ -13,4 +13,4 @@ FROM total_broad_listeners
 
 SELECT *
 FROM filter_newly_five
-WHERE rank < 6
+WHERE rank < 6 and speaker_name = "サウザー"
